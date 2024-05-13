@@ -1,0 +1,57 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model CadastroConsumidor
+
+<h2>Editar Consumidor</h2>
+
+<form asp-action="Edit" method="post">
+    <div class="form-group">
+        <label asp-for="NomeConsumidor" class="control-label">Nome:</label>
+        <input asp-for="NomeConsumidor" class="form-control" />
+        <span asp-validation-for="NomeConsumidor" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="EmailConsumidor" class="control-label">E-mail:</label>
+        <input asp-for="EmailConsumidor" class="form-control" />
+        <span asp-validation-for="EmailConsumidor" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="SenhaConsumidor" class="control-label">Senha:</label>
+        <input asp-for="SenhaConsumidor" class="form-control" />
+        <span asp-validation-for="SenhaConsumidor" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CpfConsumidor" class="control-label">CPF:</label>
+        <input asp-for="CpfConsumidor" class="form-control" />
+        <span asp-validation-for="CpfConsumidor" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="GeneroConsumidor" class="control-label">Gênero:</label>
+        <input asp-for="GeneroConsumidor" class="form-control" />
+        <span asp-validation-for="GeneroConsumidor" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DataNascimentoConsumidor" class="control-label">Data de Nascimento:</label>
+        <input asp-for="DataNascimentoConsumidor" class="form-control" />
+        <span asp-validation-for="DataNascimentoConsumidor" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="EstadoConsumidor" class="control-label">Estado:</label>
+        <input asp-for="EstadoConsumidor" class="form-control" />
+        <span asp-validation-for="EstadoConsumidor" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Salvar</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+    </div>
+</form>

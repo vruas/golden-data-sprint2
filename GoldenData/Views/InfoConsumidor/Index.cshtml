@@ -1,0 +1,48 @@
+﻿@model List<InfoConsumidor>
+
+<h2>Informações dos Consumidores</h2>
+
+@if (Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Preferência de Compra</th>
+                <th>Preferência de Anúncios</th>
+                <th>Marcas que Prefere Evitar</th>
+                <th>Hobbies</th>
+                <th>Anúncios que Prefere Evitar</th>
+                <th>Compra Online</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var info in Model)
+            {
+                <tr>
+                    <td>@info.Id</td>
+                    <td>@info.PrefCompra</td>
+                    <td>@info.PrefAnuncio</td>
+                    <td>@info.MarcasEvitadas</td>
+                    <td>@info.Hobbies</td>
+                    <td>@info.AnunciosEvitados</td>
+                    <td>@info.CompraOnline</td>
+                    <td>
+                        <a asp-controller="InfoConsumidor" asp-action="Edit" asp-route-id="@info.Id" class="btn btn-primary">Editar</a>
+                        <form asp-controller="InfoConsumidor" asp-action="Delete" asp-route-id="@info.Id" method="post" style="display: inline;">
+                            <button type="submit" class="btn btn-danger" onclick="return confirm('Tem certeza que deseja deletar este item?')">Deletar</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+  }
+else
+{
+    <p>Nenhuma informação de consumidor encontrada.</p>
+}
+
+<a asp-controller="InfoConsumidor" asp-action="Create" class="btn btn-primary">Cadastrar preferências</a>

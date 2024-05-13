@@ -1,0 +1,54 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model InfoConsumidor
+
+<h2>Editar preferencias do consumidor</h2>
+
+<form asp-action="Edit">
+    <div class="form-group">
+        <label asp-for="PrefCompra" class="control-label"></label>
+        <input asp-for="PrefCompra" class="form-control" />
+        <span asp-validation-for="PrefCompra" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="PrefAnuncio" class="control-label"></label>
+        <input asp-for="PrefAnuncio" class="form-control" />
+        <span asp-validation-for="PrefAnuncio" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+
+        <label asp-for="MarcasEvitadas" class="control-label"></label>
+        <input asp-for="MarcasEvitadas" class="form-control" />
+        <span asp-validation-for="MarcasEvitadas" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Hobbies" class="control-label"></label>
+        <input asp-for="Hobbies" class="form-control" />
+        <span asp-validation-for="Hobbies" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="AnunciosEvitados" class="control-label"></label>
+        <input asp-for="AnunciosEvitados" class="form-control" />
+        <span asp-validation-for="AnunciosEvitados" class="text-danger"></span>
+
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CompraOnline" class="control-label"></label>
+        <input asp-for="CompraOnline" class="form-control" />
+        <span asp-validation-for="CompraOnline" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Edit" class="btn btn-primary" />
+    </div>
+
+</form>
