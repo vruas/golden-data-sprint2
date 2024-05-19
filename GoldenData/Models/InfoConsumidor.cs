@@ -11,11 +11,11 @@ namespace GoldenData.Models
         public int Id { get; set; }
 
         [Required]
-        [Column("PREF_COMPRA_CLIE")]
+        [Column("PREF_CPM_CLIE")]
         public string PrefCompra { get; set; }
 
         [Required]
-        [Column("PREF_ANUNCIO")]
+        [Column("PREF_ANC")]
         public string PrefAnuncio { get; set; }
 
         [Required]
@@ -27,11 +27,11 @@ namespace GoldenData.Models
         public string Hobbies { get; set; }
 
         [Required]
-        [Column("ANUNCIOS_EVITADOS")]
+        [Column("ANC_EVITADOS")]
         public string AnunciosEvitados { get; set; }
 
         [Required]
-        [Column("COMPRA_ONLINE")]
+        [Column("CMP_ON")]
         public string CompraOnline { get; set; }
 
     }

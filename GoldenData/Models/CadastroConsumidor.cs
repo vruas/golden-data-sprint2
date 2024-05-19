@@ -7,27 +7,27 @@ namespace GoldenData.Models
     public class CadastroConsumidor
     {
         [Key]
-        [Column("ID_CONSUMIDOR")]
+        [Column("ID_CONS")]
         public int Id { get; set; }
 
         [Required]
-        [Column("EMAIL_CONSUMIDOR")]
+        [Column("EML_CONS")]
         public string EmailConsumidor { get; set; }
 
         [Required]
-        [Column("SENHA_CONSUMIDOR")]
+        [Column("SENHA_CONS")]
         public string SenhaConsumidor { get; set; }
 
         [Required]
-        [Column("CPF_CONSUMIDOR")]
+        [Column("CPF_CONS")]
         public string CpfConsumidor { get; set; }
 
         [Required]
-        [Column("NM_CONSUMIDOR")]
+        [Column("NM_CONS")]
         public string NomeConsumidor { get; set; }
 
         [Required]
-        [Column("GENERO_CONSUMIDOR")]
+        [Column("GEN_CONS")]
         public string GeneroConsumidor { get; set; }
 
         [Required]
@@ -35,7 +35,7 @@ namespace GoldenData.Models
         public string DataNascimentoConsumidor { get; set; }
 
         [Required]
-        [Column("ESTADO_CONSUMIDOR")]
+        [Column("EST_CONS")]
         public string EstadoConsumidor { get; set; }
 
     }

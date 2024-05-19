@@ -7,7 +7,7 @@ namespace GoldenData.Models
     public class CadastroEmpresa
     {
         [Key]
-        [Column("ID_EMPRESA")]
+        [Column("ID_EMP")]
         public int Id { get; set; }
 
         [Required]
@@ -15,15 +15,15 @@ namespace GoldenData.Models
         public string CNPJ { get; set; }
 
         [Required]
-        [Column("EMAIL_EMP")]
+        [Column("EML_EMP")]
         public string EmailEmpresa { get; set; }
 
         [Required]
-        [Column("SENHA_EMPRESA")]
+        [Column("SENHA_EMP")]
         public string SenhaEmpresa { get; set; }
 
         [Required]
-        [Column("RZ_SOCIAL")]
+        [Column("RZ_SOCIAL_EMP")]
         public string RazaoSocial { get; set; }
     }
 }
