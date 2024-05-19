@@ -27,12 +27,13 @@
                 <td>@company.SenhaEmpresa</td>
                 <td>@company.RazaoSocial</td>
                 <td>
-                    <a asp-controller="CadastroEmpresa" asp-action="Edit" asp-route-id="@company.Id">Editar</a> |
-                    <a asp-controller="CadastroEmpresa" asp-action="Delete" asp-route-id="@company.Id">Deletar</a>
+                    <a asp-controller="CadastroEmpresa" asp-action="Edit" class="btn btn-warning">Editar</a> 
+                    <a asp-controller="CadastroEmpresa" asp-action="Delete" class="btn btn-danger">Deletar</a>
                 </td>
             </tr>
         }
     </tbody>
 </table>
 
-<a asp-controller="CadastroEmpresa" asp-action="Create" class="btn btn-primary">Nova Empresa</a>
+<a asp-controller="CadastroEmpresa" asp-action="Create" class="btn btn-warning">Nova Empresa</a>
+<a asp-controller="Home" asp-action="Index" class="btn btn-secondary">Voltar</a>

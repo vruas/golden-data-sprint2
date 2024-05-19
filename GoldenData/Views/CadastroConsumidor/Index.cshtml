@@ -1,49 +1,54 @@
 ﻿@model List<CadastroConsumidor>
 
-<h2>Consumidores Registrados</h2>
+<h2 class="text-center">Consumidores Registrados</h2>
 
-@if (Model.Any())
-{
-    <table class="table">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Nome</th>
-                <th>E-mail</th>
-                <th>Senha</th>
-                <th>CPF</th>
-                <th>Gênero</th>
-                <th>Data de Nascimento</th>
-                <th>Estado</th>
-                <th>Ações</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var customer in Model)
-            {
+<div class="text-center">
+    @if (Model.Any())
+    {
+        <table class="table">
+            <thead>
                 <tr>
-                    <td>@customer.Id</td>
-                    <td>@customer.NomeConsumidor</td>
-                    <td>@customer.EmailConsumidor</td>
-                    <td>@customer.SenhaConsumidor</td>
-                    <td>@customer.CpfConsumidor</td>
-                    <td>@customer.GeneroConsumidor</td>
-                    <td>@customer.DataNascimentoConsumidor</td>
-                    <td>@customer.EstadoConsumidor</td>
-                    <td>
-                        <a asp-controller="CadastroConsumidor" asp-action="Edit" asp-route-id="@customer.Id" class="btn btn-primary">Editar</a>
-                        <form asp-controller="CadastroConsumidor" asp-action="Delete" asp-route-id="@customer.Id" method="post" style="display: inline;">
-                            <button type="submit" class="btn btn-danger" onclick="return confirm('Tem certeza que deseja deletar este item?')">Deletar</button>
-                        </form>
-                    </td>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Senha</th>
+                    <th>CPF</th>
+                    <th>Gênero</th>
+                    <th>Data de Nascimento</th>
+                    <th>Estado</th>
+                    <th>Ações</th>
                 </tr>
-            }
-        </tbody>
-    </table>
-}
-else
-{
-    <p>Nenhum consumidor registrado encontrado.</p>
-}
+            </thead>
+            <tbody>
+                @foreach (var customer in Model)
+                {
+                    <tr>
+                        <td>@customer.Id</td>
+                        <td>@customer.NomeConsumidor</td>
+                        <td>@customer.EmailConsumidor</td>
+                        <td>@customer.SenhaConsumidor</td>
+                        <td>@customer.CpfConsumidor</td>
+                        <td>@customer.GeneroConsumidor</td>
+                        <td>@customer.DataNascimentoConsumidor</td>
+                        <td>@customer.EstadoConsumidor</td>
+                        <td>
+                            <a asp-controller="InfoConsumidor" asp-action="Create" class="btn btn-warning">Cadastrar informações</a>
+                            <a asp-controller="CadastroConsumidor" asp-action="Edit" asp-route-id="@customer.Id" class="btn btn-warning">Editar</a>
+                            <form asp-controller="CadastroConsumidor" asp-action="Delete" asp-route-id="@customer.Id" method="post" style="display: inline;">
+                                <button type="submit" class="btn btn-danger" onclick="return confirm('Tem certeza que deseja deletar este item?')">Deletar</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>Nenhum consumidor registrado encontrado.</p>
+    }
 
-<a asp-controller="CadastroConsumidor" asp-action="Create" class="btn btn-success">Novo Consumidor</a>
+    <a asp-controller="CadastroConsumidor" asp-action="Create" class="btn btn-warning mt-3">Novo Consumidor</a>
+    <a asp-controller="Home" asp-action="Index" class="btn btn-secondary mt-3">Voltar</a>
+</div>
+

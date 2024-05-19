@@ -1,37 +1,34 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model CadastroEmpresa
 
-@model CadastroEmpresa
+<h2 class="text-center">Cadastro de Empresa</h2>
 
-<h2>Cadastro de Empresa</h2>
-
-<form asp-action="Create" method="post">
-    <div class="form-group">
-        <label asp-for="CNPJ" class="control-label">CNPJ:</label>
-        <input asp-for="CNPJ" class="form-control" />
-        <span asp-validation-for="CNPJ" class="text-danger"></span>
+<div class="row justify-content-center">
+    <div class="col-md-6 border border-warning rounded p-4">
+        <form asp-action="Create" method="post">
+            <div class="form-group">
+                <label asp-for="CNPJ" class="control-label">CNPJ:</label>
+                <input asp-for="CNPJ" class="form-control" />
+                <span asp-validation-for="CNPJ" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmailEmpresa" class="control-label">E-mail:</label>
+                <input asp-for="EmailEmpresa" class="form-control" />
+                <span asp-validation-for="EmailEmpresa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SenhaEmpresa" class="control-label">Senha:</label>
+                <input asp-for="SenhaEmpresa" class="form-control" />
+                <span asp-validation-for="SenhaEmpresa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RazaoSocial" class="control-label">Razão Social:</label>
+                <input asp-for="RazaoSocial" class="form-control" />
+                <span asp-validation-for="RazaoSocial" class="text-danger"></span>
+            </div>
+            <div class="form-group text-center mt-4">
+                <button type="submit" class="btn btn-warning">Cadastrar</button>
+                <a asp-action="Index" class="btn btn-danger">Cancelar</a>
+            </div>
+        </form>
     </div>
-    <div class="form-group">
-        <label asp-for="EmailEmpresa" class="control-label">E-mail:</label>
-        <input asp-for="EmailEmpresa" class="form-control" />
-        <span asp-validation-for="EmailEmpresa" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="SenhaEmpresa" class="control-label">Senha:</label>
-        <input asp-for="SenhaEmpresa" class="form-control" />
-        <span asp-validation-for="SenhaEmpresa" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="RazaoSocial" class="control-label">Razão Social:</label>
-        <input asp-for="RazaoSocial" class="form-control" />
-        <span asp-validation-for="RazaoSocial" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <button type="submit" class="btn btn-primary">Cadastrar</button>
-        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
-    </div>
-</form>
-
+</div>

@@ -1,56 +1,50 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model InfoConsumidor
 
-@model InfoConsumidor
-<h2>Cadastrar Preferências do Consumidor</h2>
+<h2 class="text-center">Cadastrar Preferências do Consumidor</h2>
 
-<form asp-action="Create" method="post">
-    <div class="form-group">
-        <label asp-for="PrefCompra" class="control-label">Preferência de Compra:</label>
-        <input asp-for="PrefCompra" class="form-control" />
-        <span asp-validation-for="PrefCompra" class="text-danger"></span>
+<div class="row justify-content-center">
+    <div class="col-md-6 border border-warning rounded p-4">
+        <form asp-action="Create" method="post">
+            <div class="form-group">
+                <label asp-for="PrefCompra" class="control-label">Preferência de Compra:</label>
+                <input asp-for="PrefCompra" class="form-control" />
+                <span asp-validation-for="PrefCompra" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="PrefAnuncio" class="control-label">Preferência de Anúncio:</label>
+                <input asp-for="PrefAnuncio" class="form-control" />
+                <span asp-validation-for="PrefAnuncio" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="MarcasEvitadas" class="control-label">Marcas que Prefere Evitar:</label>
+                <input asp-for="MarcasEvitadas" class="form-control" />
+                <span asp-validation-for="MarcasEvitadas" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Hobbies" class="control-label">Hobbies:</label>
+                <input asp-for="Hobbies" class="form-control" />
+                <span asp-validation-for="Hobbies" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="AnunciosEvitados" class="control-label">Anúncios que Prefere Evitar:</label>
+                <input asp-for="AnunciosEvitados" class="form-control" />
+                <span asp-validation-for="AnunciosEvitados" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="CompraOnline" class="control-label">Compra Online:</label>
+                <input asp-for="CompraOnline" class="form-control" />
+                <span asp-validation-for="CompraOnline" class="text-danger"></span>
+            </div>
+
+            <div class="form-group text-center mt-4">
+                <button type="submit" class="btn btn-warning">Criar</button>
+                <a asp-action="Index" class="btn btn-danger">Cancelar</a>
+            </div>
+        </form>
     </div>
-
-    <div class="form-group">
-        <label asp-for="PrefAnuncio" class="control-label">Preferência de Anúncio:</label>
-        <input asp-for="PrefAnuncio" class="form-control" />
-        <span asp-validation-for="PrefAnuncio" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="MarcasEvitadas" class="control-label">Marcas que Prefere Evitar:</label>
-        <input asp-for="MarcasEvitadas" class="form-control" />
-        <span asp-validation-for="MarcasEvitadas" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="Hobbies" class="control-label">Hobbies:</label>
-        <input asp-for="Hobbies" class="form-control" />
-        <span asp-validation-for="Hobbies" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="AnunciosEvitados" class="control-label">Anúncios que Prefere Evitar:</label>
-        <input asp-for="AnunciosEvitados" class="form-control" />
-        <span asp-validation-for="AnunciosEvitados" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="CompraOnline" class="control-label">Compra Online:</label>
-        <input asp-for="CompraOnline" class="form-control" />
-        <span asp-validation-for="CompraOnline" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <button type="submit" class="btn btn-primary">Criar</button>
-        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
-    </div>
-</form>
-
-
-
-
-
+</div>
